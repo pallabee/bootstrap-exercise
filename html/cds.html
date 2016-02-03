@@ -10,8 +10,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
   <!-- Bootstrap CSS -->
-  <link href="../css/bootstrap.min.css" rel="stylesheet">
-  <link href="../css/bootstrap-glyphicons.css" rel="stylesheet" />
+  <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../lib/css/bootstrap-glyphicons.css" rel="stylesheet" />
   <!-- fonts -->
   <link href='https://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
@@ -19,20 +19,65 @@
   <link href="../css/styles.css" rel="stylesheet">
 
 </head>
+<!-- Html for image slide show -->
+<div class="carousel slide" id="myCarousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li class="active" data-slide-to="0" data-target="#myCarousel"></li>
+    <li data-slide-to="1" data-target="#myCarousel"></li>
+    <li data-slide-to="2" data-target="#myCarousel"></li>
+  </ol>
 
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active" id="slide1">
+      <div class="carousel-caption">
+        <h4>We drive, to arrive.</h4>
+        <p>Your local driving school.Learn to drive from the professionals.More than just driving instructors.</p>
+      </div>
+      <!-- end carousel-caption-->
+    </div>
+    <!-- end item -->
+
+    <div class="item" id="slide2">
+      <div class="carousel-caption">
+        <h4>Your road to driving success.</h4>
+        <p>With you all the way.Learn the right way, right away.</p>
+      </div>
+      <!-- end carousel-caption-->
+    </div>
+    <!-- end item -->
+
+    <div class="item" id="slide3">
+      <div class="carousel-caption">
+        <h4>We won't steer you wrong.</h4>
+        <p>Saving lives through better education.Safe driving is no accident.</p>
+      </div>
+      <!-- end carousel-caption-->
+    </div>
+    <!-- end item -->
+  </div>
+  <!-- carousel-inner -->
+
+  <!-- Controls -->
+  <a class="left carousel-control" data-slide="prev" href="#myCarousel"><span class="icon-prev"></span></a>
+  <a class="right carousel-control" data-slide="next" href="#myCarousel"><span class="icon-next"></span></a>
+
+</div>
 <body>
+  <!-- html for title bar -->
   <div class="container col-12" id="main">
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header col-3">
+        <div class="navbar-header col-3" id="logoimage">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#"><img src="../img/logo_img.png" alt="Car Driving School"></a>
+          <a class="navbar-brand" href="#"><img src="../img/logo_nav4.png" alt=""></a>
         </div>
         <div class="navbar-left col-4">
           <h1>Car Driving School</h1></div>
@@ -44,7 +89,7 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="#register">Driving Courses</a></li>
+                <li><a href="#drivingCourses">Driving Courses</a></li>
                 <li role="separator" class="divider"></li>
                 <li><a href="#teen">News and Activities</a></li>
                 <li><a href="#newsactivities">Testimonials</a></li>
@@ -60,7 +105,99 @@
       </div>
       <!-- end .container -->
     </nav>
+    <!-- html for Registration Link -->
+    <div class="page-header textcenter col-12 row" id="register">
+      <h2>Smart drivers start here. REGISTER NOW!
+      </h2>
+      <!-- <a href="" class="btn btn-lg btn-primary" id="alertMe">Register</a> -->
+      <a href="#myModal" role="button" class="btn btn-warning" data-toggle="modal"><span class="glyphicon glyphicon-hand-up"></span>Register</a>
+      <div class="modal fade" id="myModal">
+      	<div class="modal-dialog">
+      		<div class="modal-content">
+      			<div class="modal-header">
+      				<button class="close" data-dismiss="modal">&times;</button>
 
+      				<h4 class="modal-title">Registration</h4>
+      			</div><!-- end modal-header -->
+      			<div class="modal-body">
+
+      				<div class="modal fade" id="myModal">
+      					<div class="modal-dialog">
+      						<div class="modal-content">
+      							<div class="modal-header">
+      								<button class="close" data-dismiss="modal">&times;</button>
+
+      								<h4 class="modal-title">Registration</h4>
+      							</div><!-- end modal-header -->
+      							<div class="modal-body">
+      								<form class="form-horizontal">
+      									<div class="form-group">
+      										<label class="col-lg-2 control-label" for="inputName">Name</label>
+      										<div class="col-lg-10">
+      											<input class="form-control" id="inputName" placeholder="Name" type="text">
+      										</div>
+      									</div>
+
+      									<div class="form-group">
+      										<label class="col-lg-2 control-label" for="inputEmail">Email</label>
+      										<div class="col-lg-10">
+      											<input class="form-control" id="inputEmail" placeholder="Email" type="email">
+      										</div>
+      									</div>
+
+      									<div class="form-group">
+      										<label class="col-lg-2 control-label" for="inputMessage">Message</label>
+      										<div class="col-lg-10">
+      											<textarea class="form-control" id="inputMessage" placeholder="Message" rows="3"></textarea>
+      											<button class="btn btn-success pull-right" type="submit">Send!</button>
+      										</div>
+      									</div>
+      								</form>
+      							</div><!-- end modal-body -->
+
+      							<div class="modal-footer">
+      								<button class="btn btn-default" data-dismiss="modal" type="button">Close</button> <button class="btn btn-primary" type="button">Save changes</button>
+      							</div><!-- end modal-footer -->
+      						</div><!-- end modal-content -->
+      					</div><!-- end modal-dialog -->
+      				</div><!-- end myModal -->
+      				<!-- <hr> -->
+
+      				<form class="form-horizontal">
+      					<div class="form-group">
+      						<label class="col-lg-2 control-label" for="inputName">Name</label>
+      						<div class="col-lg-10">
+      							<input class="form-control" id="inputName" placeholder="Name" type="text">
+      						</div>
+      					</div>
+
+      					<div class="form-group">
+      						<label class="col-lg-2 control-label" for="inputEmail">Email</label>
+      						<div class="col-lg-10">
+      							<input class="form-control" id="inputEmail" placeholder="Email" type="email">
+      						</div>
+      					</div>
+
+      					<div class="form-group">
+      						<label class="col-lg-2 control-label" for="inputMessage">Message</label>
+      						<div class="col-lg-10">
+      							<textarea class="form-control" id="inputMessage" placeholder="Message" rows="3"></textarea>
+      							<button class="btn btn-success pull-right" type="submit">Send!</button>
+      						</div>
+      					</div>
+      				</form>
+      			</div><!-- end modal-body -->
+
+      			<div class="modal-footer">
+      				<button class="btn btn-default" data-dismiss="modal" type="button">Close</button> <button class="btn btn-primary" type="button">Save changes</button>
+      			</div><!-- end modal-footer -->
+      		</div><!-- end modal-content -->
+      	</div><!-- end modal-dialog -->
+      </div><!-- end myModal -->
+    </div>
+
+    <!-- end bigCallout -->
+    <!-- html for About Us section -->
     <div class="row" id="features">
       <div id="about" class="textcenter">
         <h3 class="dchead artfont">ABOUT US</h3>
@@ -115,82 +252,9 @@
     </div>
 
     <!-- end features -->
-    <div class="carousel slide" id="myCarousel">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li class="active" data-slide-to="0" data-target="#myCarousel"></li>
-        <li data-slide-to="1" data-target="#myCarousel"></li>
-        <li data-slide-to="2" data-target="#myCarousel"></li>
-      </ol>
 
-      <!-- Wrapper for slides -->
-      <div class="carousel-inner">
-        <div class="item active" id="slide1">
-          <div class="carousel-caption">
-            <h4>We drive, to arrive.</h4>
-            <p>Your local driving school.Learn to drive from the professionals.More than just driving instructors.</p>
-          </div>
-          <!-- end carousel-caption-->
-        </div>
-        <!-- end item -->
-
-        <div class="item" id="slide2">
-          <div class="carousel-caption">
-            <h4>Your road to driving success.</h4>
-            <p>With you all the way.Learn the right way, right away.</p>
-          </div>
-          <!-- end carousel-caption-->
-        </div>
-        <!-- end item -->
-
-        <div class="item" id="slide3">
-          <div class="carousel-caption">
-            <h4>We won't steer you wrong.</h4>
-            <p>Saving lives through better education.Safe driving is no accident.</p>
-          </div>
-          <!-- end carousel-caption-->
-        </div>
-        <!-- end item -->
-      </div>
-      <!-- carousel-inner -->
-
-      <!-- Controls -->
-      <a class="left carousel-control" data-slide="prev" href="#myCarousel"><span class="icon-prev"></span></a>
-      <a class="right carousel-control" data-slide="next" href="#myCarousel"><span class="icon-next"></span></a>
-
-    </div>
     <!-- end myCarousel -->
-    <div class="row classpadding" id="bigCallout">
-      <div class="col-12">
-
-        <div class="alert alert-success alert-block fade in textcenter" id="successAlert">
-          <button type="button" class="close" data-dismiss="alert">&times;</button>
-
-          <h4>Success!</h4>
-          <p>You just registered with us.</p>
-        </div>
-        <!-- end alert -->
-
-        <div class="well">
-          <div class="page-header textcenter" id="register">
-            <h2>Smart drivers start here. REGISTER NOW!
-              <!-- <p>
-                <small>Smart drivers start here.</small>
-              </p> -->
-              <!-- <small></small> -->
-            </h2>
-            <a href="" class="btn btn-lg btn-primary" id="alertMe">Register</a>
-          </div>
-
-          <!-- end page-header -->
-        </div>
-        <!-- end well -->
-
-      </div>
-      <!-- end col-12 -->
-    </div>
-    <!-- end bigCallout -->
-    <hr />
+    <!-- html for Driving Couses section -->
     <!-- 3x3 Portfolio Section -->
     <div class="row classpadding" id="drivingCourses">
       <div class="col-12">
@@ -253,7 +317,7 @@
       </div>
 
       <hr>
-      <!-- Article section - 2 column section with image and text -->
+      <!-- News and activities section - 2 column section with image and text -->
       <div class="row" id="newsactivities">
         <article>
           <img src="../img/news_img.png" alt="News and Activities" class="imgnews col-sm-5" />
@@ -277,7 +341,7 @@
         </article>
       </div>
       <hr>
-      <!-- Article section - 2 column section with image and text -->
+      <!-- Testimonials section - 2 column section with image and text -->
       <div class="row" id="testimonials">
         <article>
           <div class="col-sm-7">
@@ -302,6 +366,7 @@
         </article>
       </div>
       <hr />
+      <!-- html for Locate Us Section -->
       <div class="row col-12 classpadding">
         <h3 class="dchead artfont">Locate Us</h3>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.568112830849!2d77.61172481435341!3d12.935456619171424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae144e0c7d418f%3A0x48d008360cebcde4!2sStackRoute!5e0!3m2!1sen!2sin!4v1454259526950"
@@ -324,6 +389,7 @@
         <div class="col-sm-1">
           <a href="#">
             <img title="Twitter" alt="Twitter" src="https://socialmediawidgets.files.wordpress.com/2014/03/01_twitter1.png" width="35" height="35" />
+            <span class="social social-twitter"></span>
           </a>
           <a href="#">
             <img title="LinkedIn" alt="LinkedIn" src="https://socialmediawidgets.files.wordpress.com/2014/03/07_linkedin1.png" width="35" height="35" />
@@ -338,7 +404,7 @@
       </div>
     </footer>
     <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <!-- Custom JS -->
     <script src="../js/script.js"></script>
   </div>
